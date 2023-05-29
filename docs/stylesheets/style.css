@@ -1,0 +1,67 @@
+/* custom admonition for DIY sections */
+:root {
+
+  .md-typeset .admonition.diy,
+  .md-typeset details.diy {
+    border-color: rgb(43, 155, 70);
+  }
+  .md-typeset .diy > .admonition-title,
+  .md-typeset .diy > summary {
+    background-color: rgba(43, 155, 70, 0.1);
+  }
+  .md-typeset .diy > .admonition-title::before,
+  .md-typeset .diy > summary::before {
+    background-color: rgb(43, 155, 70);
+    -webkit-mask-image: "../img/icons/gh-logo.svg";
+            mask-image: "../img/icons/gh-logo.svg";
+  }
+}
+
+
+[data-md-color-scheme="aarc"] {
+
+/* MAIN COLOR SCHEME ----------------------------------------------------------------- */
+
+--header-color: rgb(87, 95, 131);
+--accent-color: 		rgb(102, 255, 110);
+--background-color: rgb(36, 41, 54);
+--code-background: rgb(17, 19, 26);
+--link-color: rgb(119, 130, 179);
+
+--main-text: 	rgb(204, 202, 194);
+--title-text:		rgb(255, 255, 255);
+--code-text: rgb(240, 240, 240);
+
+/* the header background */
+--md-primary-fg-color: var(--header-color);
+/* the header icons and text color */
+--md-primary-bg-color: var(--background-color);
+/*the search bar text color */
+--md-primary-bg-color--light: var(--background-color);
+
+/* the background colour*/
+--md-default-bg-color: var(--background-color);
+
+/*main text color */
+--md-typeset-color: var(--main-text);
+/* link color */
+--md-typeset-a-color: var(--link-color);
+/* hilight when hover text */
+--md-accent-fg-color: var(--accent-color);
+
+/*header 1 and table of contents color*/
+--md-default-fg-color--light: var(--title-text);
+
+/*code background color*/
+--md-code-fg-color: var(--code-text);
+--md-code-bg-color: var(--code-background);
+
+
+/*admonitions background colors*/
+--md-admonition-bg-color: var(--background-color);
+/*admonitions text color*/
+.admonition {
+    color: var(--code-text);
+}
+
+}

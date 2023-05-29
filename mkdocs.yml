@@ -1,0 +1,50 @@
+site_name: AARC WIKI
+
+extra_css:
+  - stylesheets/style.css
+
+theme:
+  name: material
+
+  palette:
+    scheme: aarc
+
+  features:
+    - navigation.instant
+
+nav:
+    - Home: 'index.md'
+    - 'Grasshopper Basics':
+        - 'Introduction': 'gh/intro.md'
+        - 'Interface and Components': 'gh/interface.md'
+        - 'Writing Your First Definition': 'gh/first-definition.md'
+        - 'Interacting With Rhino': 'gh/rhino-interaction.md'
+        - 'Parameters': 'gh/parameters.md'
+        - 'Planes and Vectors': 'gh/planes-vectors.md'
+        - 'Transformations': 'gh/transformations.md'
+        - 'Annotations, Grouping, Clustering': 'gh/annotations.md'
+        - 'Data Management': 'gh/data-management.md'
+        - 'Project: Staircase': 'gh/gh-staircase.md'
+    - About:
+        - 'License': 'license.md'
+        - 'Release Notes': 'release-notes.md'
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
