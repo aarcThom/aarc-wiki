@@ -1,0 +1,842 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../intro/">
+      
+      
+        <link rel="next" href="../first-definition/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+    
+    
+      
+        <title>Interface - AARC WIKI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="aarc" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#grasshopper-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AARC WIKI" class="md-header__button md-logo" aria-label="AARC WIKI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AARC WIKI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AARC WIKI" class="md-nav__button md-logo" aria-label="AARC WIKI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    AARC WIKI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Grasshopper Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Grasshopper Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Interface
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-first-look" class="md-nav__link">
+    A First Look
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-menu-bar" class="md-nav__link">
+    Main Menu Bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-panel" class="md-nav__link">
+    Components Panel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-canvas" class="md-nav__link">
+    The Canvas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-definition/" class="md-nav__link">
+        Writing Your First Definition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rhino-interaction/" class="md-nav__link">
+        Interacting With Rhino
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parameters/" class="md-nav__link">
+        Parameters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vectors/" class="md-nav__link">
+        Vectors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transformations/" class="md-nav__link">
+        Transformations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planes/" class="md-nav__link">
+        Planes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotations/" class="md-nav__link">
+        Annotations, Grouping, Clustering
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-management/" class="md-nav__link">
+        Data Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gh-staircase/" class="md-nav__link">
+        Project: Staircase
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license.md" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-notes.md" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-first-look" class="md-nav__link">
+    A First Look
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-menu-bar" class="md-nav__link">
+    Main Menu Bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-panel" class="md-nav__link">
+    Components Panel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-canvas" class="md-nav__link">
+    The Canvas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="grasshopper-interface">Grasshopper Interface</h1>
+<p>First things, first. To open Grasshopper type  <code>grasshopper</code> into your Rhino command line, or simply click the 🦗 icon in the standard tab.</p>
+<h2 id="a-first-look">A First Look</h2>
+<p>The window that pops up should look something like the image below. Note that your window may also be overlaid with the tutorials file window. You can safely close this window as those tutorials are also stored in the Grasshopper help tab.</p>
+<p>The image below outlines the main areas of the user interface. Each of these areas are elaborated in the following sections. Click on the tabs below to scroll through descriptions of the sub-menus and functionalities of the Grasshopper UI.</p>
+<div class="admonition warning">
+<p class="admonition-title">The Grasshopper component panels below may look slightly different</p>
+<p>As you progress with Grasshopper, you will add custom component panels to your interface. All of the illustrations have two custom panels: <em>Wb (weaverbird)</em> and <em>Lunchbox</em>. Don't worry that your fresh copy of Grasshopper doesn't have these two panels!</p>
+</div>
+<figure>
+<p><img alt="Image title" src="../../img/intro-interface/gh-interface-interface.png" width="850" />
+  </p>
+<figcaption>Grasshopper Interface</figcaption>
+</figure>
+<h2 id="main-menu-bar">Main Menu Bar</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Intro</label><label for="__tabbed_1_2">File tab</label><label for="__tabbed_1_3">Edit tab</label><label for="__tabbed_1_4">View tab</label><label for="__tabbed_1_5">Display tab</label><label for="__tabbed_1_6">Solution tab</label><label for="__tabbed_1_7">Help tab</label><label for="__tabbed_1_8">File browser</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--intro.png" width="850" />
+</figure></p>
+<p>The main menu bar is similar to other programs you have encountered using windows.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--filetab.png" width="850" />
+</figure></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Grasshopper has a tendency to freeze and/or crash while you are learning how to use it. Save often using the <code>Save</code> command under the file tab, or press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span>.</p>
+</div>
+<p>Open one of the tutorial files under <code>Help --&gt; Tutorial Files</code> and try both the <code>export quick image</code> and <code>Export Hi-Res Image</code> commands. These can be useful for sharing your work with others. I wouldn't encourage you to include the diagrams on studio presentation boards however. Most often reviewers will not be able to make heads or tails of the spaghetti like image!</p>
+<p>We will return to <code>special folders</code> when we look at installing plugins, but for now just know its there.</p>
+<p>Finally, the <code>new document</code>, <code>open document</code>, <code>recent files</code> and <code>close</code> will behave as expected.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--edittab.png" width="850" />
+</figure></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Most non-mac computers will be able to use the common shortcuts <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> for copy, etc. Users with mac laptops <em>but running Rhino on Windows</em> often have to use the commands located in <code>edit</code> in order to copy, paste, delete.</p>
+</div>
+<p>Grasshopper's <code>copy</code>, <code>paste</code>, <code>delete</code>, <code>undo</code>, <code>redo</code>, <code>select all</code>, and <code>deselect all</code> will function as expected. Most likely, you will end up using the shortcuts. For example, +<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>+ for copy. We will get to what exactly we will be copying in the next section.</p>
+<p>The other commands will be covered in later sections.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--viewtab.png" width="850" />
+</figure></p>
+<p>The view tab primarily deals with the view of the interface menus itself. Feel free to play around with settings, but know that these tutorials use default settings. </p>
+<p>The one section that you may find useful is <code>zoom</code>. This section allows you to zoom to different areas of your definition and the canvas.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--displaytab.png" width="850" />
+</figure></p>
+<p>The display tab primarily deals with the was grasshopper objects are drawn in Rhino and the way Grasshopper components are drawn on the canvas.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For all of these tutorials we will use the default display setting minus one change. I would encourage you to enable <code>Draw Full Names</code>. This setting will render full names on your GH components. This is especially helpful for learning what each component does.</p>
+</div>
+<p>Return to the settings after completing the <strong>Grasshopper Basics</strong> section. You may find that you prefer different display settings. For now, you can leave all other settings as default.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--solutiontab.png" width="850" />
+</figure></p>
+<p>The solution tab primarily deals with the <em>Grasshopper solver</em>. As data flows through your components, you can use the options in this tab to pause the solver and save states of flows.</p>
+<p>This section also allows you to disable, preview, and bake (bring into Rhino) the outputs of components.</p>
+<p>You will find that this tab is rarely used, so know it's there, but don't be surprised if you never open it again.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--helptab.png" width="850" />
+</figure></p>
+<p>Now, this is an important tab!</p>
+<div class="admonition diy">
+<p class="admonition-title">Try it for yourself!</p>
+<p>While we're here. Take some time to go through the <code>tutorial files</code>. Don't worry if they don't totally make sense.</p>
+</div>
+<p>The <code>grasshopper support</code> command will take you to the <a href="https://discourse.mcneel.com/c/grasshopper/2">Mcneel Grasshopper Forum</a>. It's worth searching this forum for a question you may have. Further, make an account and ask you own question if you can't find an answer!</p>
+<p>The <code>Online Reference</code> command will take you to the <a href="http://grasshopperdocs.com/">Grasshoper Components Documentation</a> where you will find notes <em>on every single component.</em></p>
+<div class="admonition tip">
+<p class="admonition-title">Google is your friend</p>
+<p>I would encourage you to simply google "grasshopper" plus whatever problem you are trying to solve. Google is your friend.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">ChatGPT is your unreliable (but still useful) friend</p>
+<p>You can also try asking <a href="https://chat.openai.com/">ChatGPT</a> to describe a basic component flow and even generate a rudimentary diagram.</p>
+<p>Try phrasing you question as </p>
+<p><code>I'm using Rhino 3D grasshopper. What components could I use to make a &lt;insert your goal here&gt;? Include a diagram with your answer.</code></p>
+<p>You will get a step by step instruction set with a diagram that looks like this:
+<div class="highlight"><pre><span></span><code>  [Curve]   [Curve Length]  [Divide Curve]   [Point On Curve]
+     |             |                |                |
+     +-------------+----------------+----------------+
+                           |
+                     [Offset Curve]
+                           |
+                           +-------+
+                                   |
+                                [Loft]
+                                   |
+                                   +------+
+                                           |
+                                  [Sweep 1 Rail]
+                                           |
+                                     [Staircase Geometry]
+</code></pre></div>
+Pretty cool!</p>
+<p>In my testing, its answer are <em>generally</em> correct in approach but will contain smaller errors. This may be a good way to brainstorm but do not use ChatGPT as a crutch, especially when you are first learning.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="Image title" src="../../img/intro-interface/interface-menu/int--filebrowser.png" width="850" />
+</figure></p>
+<p>The <code>file browser</code> appears after you have opened at least one GH file. When you have more than one GH file open, you can switch between them using the <code>File browser</code> located on the right hand side of the main menu bar. You can also close files from the browser.</p>
+</div>
+</div>
+</div>
+<h2 id="components-panel">Components Panel</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:13"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><input id="__tabbed_2_9" name="__tabbed_2" type="radio" /><input id="__tabbed_2_10" name="__tabbed_2" type="radio" /><input id="__tabbed_2_11" name="__tabbed_2" type="radio" /><input id="__tabbed_2_12" name="__tabbed_2" type="radio" /><input id="__tabbed_2_13" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Intro</label><label for="__tabbed_2_2">Using the Components Panel</label><label for="__tabbed_2_3">Params</label><label for="__tabbed_2_4">Maths</label><label for="__tabbed_2_5">Sets</label><label for="__tabbed_2_6">Vector</label><label for="__tabbed_2_7">Curve</label><label for="__tabbed_2_8">Surface</label><label for="__tabbed_2_9">Mesh</label><label for="__tabbed_2_10">Intersect</label><label for="__tabbed_2_11">Transform</label><label for="__tabbed_2_12">Display</label><label for="__tabbed_2_13">Kangaroo2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-intro.png" width="850" /></figure></p>
+<p>Welcome to the component panel, where you can explore all the different component categories. Each component belongs to a specific category, such as "Params" for primitive data types or "Curves" for curve-related tools.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/components-anim.gif" width="850" /></figure></p>
+<p>Each category of components is given its own panel. To switch between categories, you click the tabs on the top of the panel. For example, clicking the ‘vector’ tab will display all vector components and clicking the ‘curve’ tab will display all curve related components. Within each of these categories you will see that the components are grouped into sub-categories that further organize components.</p>
+<p>Since there can be a large number of components per sub-category, we only display the most commonly used ones in the main panel. If you want to see the entire collection, simply click on the dark grey bar with the little arrow at the bottom of the panel. When you click on the bar, a category panel will pop up, giving you access to all the objects. In this panel, you have two options: you can either click on the objects in the popup list, or you can directly drag them from the list onto the canvas. Personally, I prefer the click method as the drag method sometime creates two of the same components!</p>
+<p>Clicking on buttons will not automatically add them to the canvas. To add a component to your canvas, you must click once on the component icon, and then once again on the canvas itself.</p>
+<p>You can find where a component lives in the panel by holding <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd></span> on your keyboard and hold clicking on a canvas component. This command will circle and arrow the exact location of the component!</p>
+<p>You can also double click an empty portion of the canvas to search for a component by name.</p>
+<div class="admonition tip">
+<p class="admonition-title">Hover over everything!</p>
+<p>You can hover over components in the panel, the search bar, and on the canvas to display a text description of what said component does. Do this often, especially while you are learning!</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-params.png" width="850" /></figure></p>
+<p>This panel houses all the primitive data types, such as numbers, texts, and boolean values. You can use these components to input or generate data for your designs.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-maths.png" width="850" /></figure></p>
+<p>If you need to perform mathematical operations within Grasshopper, the Math panel is where you'll find the relevant components. It includes components for basic arithmetic, trigonometry, logarithms, and more.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-sets.png" width="850" /></figure></p>
+<p>In the Sets panel, you'll find components for working with sets and lists of data. You will primarily use the <em>list</em> sub-category to organize your Grasshopper data. More advanced components allow you to perform set operations on the data itself, such as union, intersection, difference, and more.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-vector.png" width="850" /></figure></p>
+<p>The Vector panel is where you'll find components related to vector operations. Vectors represent direction and magnitude, and they are fundamental in many design and computational geometry tasks. This panel provides components for creating, manipulating, and analyzing vectors within Grasshopper.</p>
+<p>In addition to vectors, you will also find commands related to planes and points. Planes will allow you to orient geometry while points will allow you to define specific locations in space.</p>
+<p>The Vector panel is particularly useful when working with geometric transformations, such as translating or orienting objects in space. You can use the components in this panel to define and manipulate vectors, planes, and points that control the direction and magnitude of these transformations.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-curve.png" width="850" /></figure></p>
+<p>In the Curves panel, you'll find a variety of tools and components related to curves. This includes components for creating, manipulating, and analyzing curves in your Grasshopper projects.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-surface.png" width="850" /></figure></p>
+<p>The Surfaces panel provides components for working with surfaces. You can create, modify, and analyze surfaces using the tools available in this panel.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-mesh.png" width="850" /></figure></p>
+<p>If you're working with 3D meshes, the Mesh panel is where you'll find the necessary components. It offers tools for creating, editing, and analyzing meshes in Grasshopper</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-mesh.png" width="850" /></figure></p>
+<p>The Intersect panel in Grasshopper houses components for finding intersections between geometric entities. It includes tools to identify points, curves, surfaces, and other objects where they intersect or overlap. These components are vital for geometry analysis, spatial relationships, and generating complex shapes.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-transform.png" width="850" /></figure></p>
+<p>The Transform panel contains components for transforming geometry in various ways. This includes translation, rotation, scaling, and other transformations that allow you to manipulate objects in your Grasshopper projects.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-display.png" width="850" /></figure></p>
+<p>The Display panel offers components for visualizing your data and designs. It includes components for creating 2D and 3D graphics, controlling colors, and setting up visualization parameters.</p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-components/int--comp-kangaroo2.png" width="850" /></figure></p>
+<p>The Kangaroo panel in Grasshopper is dedicated to the Kangaroo physics engine, a powerful tool for simulating and modeling physical behavior within your designs. This panel contains components that enable you to apply constraints and forces to your geometry, allowing you to simulate structural, mechanical, and natural systems.</p>
+<p>By utilizing the Kangaroo panel's components, you can add realistic physics-based behavior to your designs, enabling you to explore and analyze how objects interact, deform, and respond to external forces. The Kangaroo panel opens up a world of possibilities for creating interactive and dynamic designs in Grasshopper.</p>
+</div>
+</div>
+</div>
+<h2 id="the-canvas">The Canvas</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Intro</label><label for="__tabbed_3_2">Working in the canvas</label><label for="__tabbed_3_3">Canvas Widgets</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-canvas/int--canvas-intro.png" width="850" /></figure></p>
+<p>Welcome to the Grasshopper canvas! The canvas is where your creative ideas come to life and where you bring your designs to reality. It serves as the digital workspace where you connect components, define relationships, and build intricate visual algorithms.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="video-wrapper">
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Vi0KUg2G1Mk" frameborder="0" allowfullscreen></iframe>
+</div></p>
+<p>The canvas is where we build our definitions. Rather than breaking down each command into text, we opted for a video explanation. Watch the video - pause often - try to follow along on your own computer. </p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown><img alt="Image title" src="../../img/intro-interface/interface-canvas/int--canvas-widgets.png" width="850" /></figure></p>
+<p>The Grasshopper canvas provides a few widgets to enhance our workflow.</p>
+<p><em>Markov</em> tries to guess what component we will want to use next. Simply click the icon to place the indicated component on the canvas. It makes better predictions as you work more in Grasshopper. Useful? Maybe!</p>
+<p><em>Compass</em> orients you towards the components on your canvas. This can actually be quite useful if you are lost way out in outer extremities of the canvas.</p>
+<p><em>Profiler</em>. By default this widget will not show. To enable it go to <code>Display -&gt; Canvas widgets -&gt; profiler</code>. This will attach a little indicator to most components indicating the time it takes the Grasshopper solver to compute the work said component is performing. This widget can be helpful to troubleshoot problem areas in your definition. Further, if you write your own components in Python or C#, the profiler also provides valuable feedback on the components performance.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>
