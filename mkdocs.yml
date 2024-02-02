@@ -15,20 +15,19 @@ theme:
 nav:
     - Home: 'index.md'
     - 'Grasshopper Basics':
-        - 'Introduction': 'gh/intro.md'
+        #- 'Introduction': 'gh/intro.md'
         - 'Interface': 'gh/interface.md'
         - 'Writing Your First Definition': 'gh/first-definition.md'
-        - 'Interacting With Rhino': 'gh/rhino-interaction.md'
-        - 'Parameters': 'gh/parameters.md'
-        - 'Vectors': 'gh/vectors.md'
-        - 'Transformations': 'gh/transformations.md'
-        - 'Planes': 'gh/planes.md'
-        - 'Annotations, Grouping, Clustering': 'gh/annotations.md'
-        - 'Data Management': 'gh/data-management.md'
-        - 'Project: Staircase': 'gh/gh-staircase.md'
-    - About:
-        - 'License': 'license.md'
-        - 'Release Notes': 'release-notes.md'
+        #- 'Interacting With Rhino': 'gh/rhino-interaction.md'
+        #- 'Parameters': 'gh/parameters.md'
+        #- 'Vectors': 'gh/vectors.md'
+        #- 'Transformations': 'gh/transformations.md'
+        #- 'Planes': 'gh/planes.md'
+        #- 'Annotations, Grouping, Clustering': 'gh/annotations.md'
+        #- 'Data Management': 'gh/data-management.md'
+    #- About:
+        #- 'License': 'license.md'
+        #- 'Release Notes': 'release-notes.md'
 
 plugins:
   - search
