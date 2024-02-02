@@ -1,14 +1,5 @@
 # Your First Grasshopper Definition
 
-## File Downloads
-All GH files will be available for download. Follow [the links](https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/01_basic_definition.gh) provided with each page of instruction to download the proper file. Once you're on the linked page, click the *raw download* button as shown in a green rectangle below to download the `.gh` file.
-
-<figure markdown>
-  ![Basic Definition](../img/first-def/02_download.png){ width="850" }
-  <figcaption>Click the button in the green rectangle!</figcaption>
-</figure>
-
-## Your First Grasshopper Definition
 For the first real definition we cover, we are going to make a widget. This widget isn't totally purposeless - it demonstrates some of the core functionalities within Grasshopper.
 <br>
 We will cover this and future definitions, step by step. Refer to the numbered component groups in the image below.
@@ -84,7 +75,7 @@ Grasshopper offers a really useful way to quickly alter numerical values on comp
   ![Basic Definition](../img/first-def/6a_expression.png){ width="850" }
 </figure>
 
-## 07 Previewing Geometry
+## 07 - Previewing Geometry
 
 Grasshopper is *non-destructive*. Geometry created during the process of building up a definition is never deleted. However, you will often want to hide intermediate geometry. To do so, *right click* the component containing the geometry to be hidden, and click *Preview*. This will toggle on and off the geometry preview in the Rhino viewport without affecting the downstream Grasshopper components.
 
