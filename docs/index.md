@@ -32,4 +32,15 @@ These documents use a few textual conventions to help with readability.
 ### Mouseclicks and Shortcuts
 Mouse clicks will be represented by ++"rmb"++ for a right-click, and ++"lmb"++ for a left-click. Shortcuts will represented by their key combos. For example, ++ctrl+c++ for copy.
 
+### Admonitions
+Important points will be formatted like so:
+
+!!! Tip "Parameters & Components - What are they?"
+    All the little 'nodes' that make up a Grasshopper definition (script) are called *components*. *Parameters* are a class of component that either reference data from Rhino, reference data from outside of Rhino / Grasshopper, or, as in this case, reference user input.
+
+Common beginner traps will be formatted like so:
+
+!!! Warning "Always X!"
+    The input Expression field can only ever contain one variable, X. If you need a more complex expression, you can always build it up outside of an input from components found in the *Maths* tab.
+
 
