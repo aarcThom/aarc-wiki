@@ -427,9 +427,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04-05-drawing-a-line-and-visualizing-geometry" class="md-nav__link">
+  <a href="#04-05-drawing-a-line" class="md-nav__link">
     <span class="md-ellipsis">
-      04 / 05 - Drawing a Line and Visualizing Geometry
+      04 / 05 - Drawing a Line
     </span>
   </a>
   
@@ -445,9 +445,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#07-previewing-geometry" class="md-nav__link">
+  <a href="#07-boolean-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      07 - Previewing Geometry
+      07 - Boolean Operations
     </span>
   </a>
   
@@ -616,9 +616,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04-05-drawing-a-line-and-visualizing-geometry" class="md-nav__link">
+  <a href="#04-05-drawing-a-line" class="md-nav__link">
     <span class="md-ellipsis">
-      04 / 05 - Drawing a Line and Visualizing Geometry
+      04 / 05 - Drawing a Line
     </span>
   </a>
   
@@ -634,9 +634,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#07-previewing-geometry" class="md-nav__link">
+  <a href="#07-boolean-operations" class="md-nav__link">
     <span class="md-ellipsis">
-      07 - Previewing Geometry
+      07 - Boolean Operations
     </span>
   </a>
   
@@ -795,10 +795,7 @@ For example, run the Rhino command <code>Sphere</code>. You will be taken throug
 <p class="admonition-title">Grasshopper Type Conversions</p>
 <p>Grasshopper often converts geometrical types that are <em>close enough</em> upon input. In this example, <code>Construct Point</code> outputs a 3D point which is plugged into <strong>Base</strong> in <code>Sphere</code> despite <strong>Base</strong> asking for a 3D plane. In cases like these Grasshopper will automatically convert a 3D point into a plane with an origin defined by that 3D point. Other conversions happen - try plugging the 'wrong' geometry into inputs to see what happens, but don't be surprised if you get an error sometimes!</p>
 </div>
-<h2 id="04-05-drawing-a-line-and-visualizing-geometry">04 / 05 - Drawing a Line and Visualizing Geometry</h2>
-<p>In addition to textual descriptions, we can of course, visualize geometry in the Rhino window. Be default, geometry that is visible <em>but not selected</em> will be displayed as red while geometry that <em>is selected</em> will be displayed a green.</p>
-<p>In this case when we <span class="keys"><kbd>lmb</kbd></span> the <code>Construct Point</code> in group 4, we see the corresponding point turn green in the Rhino viewport.</p>
-<p>Group 5 shows the use of the <code>Line</code> component. This component defines a line from a start point and an end point - extremely useful.</p>
+<h2 id="04-05-drawing-a-line">04 / 05 - Drawing a Line</h2>
 <figure>
 <p><img alt="Basic Definition" src="../../img/first-def/05_arm_line.png" width="850" /></p>
 </figure>
@@ -811,15 +808,7 @@ For example, run the Rhino command <code>Sphere</code>. You will be taken throug
 <figure>
 <p><img alt="Basic Definition" src="../../img/first-def/6a_expression.png" width="850" /></p>
 </figure>
-<h2 id="07-previewing-geometry">07 - Previewing Geometry</h2>
-<p>Grasshopper is <em>non-destructive</em>. Geometry created during the process of building up a definition is never deleted. However, you will often want to hide intermediate geometry. To do so, <span class="keys"><kbd>rmb</kbd></span> the component containing the geometry to be hidden, and <span class="keys"><kbd>lmb</kbd></span> <em>Preview</em>. This will toggle on and off the geometry preview in the Rhino viewport without affecting the downstream Grasshopper components.</p>
-<figure>
-<p><img alt="Basic Definition" src="../../img/first-def/07_boolean.gif" width="850" /></p>
-</figure>
-<div class="admonition warning">
-<p class="admonition-title">Enable is different than Preview</p>
-<p>Enable disables both the preview in the Rhino viewport, <em>and disables the component preventing downstream components from accessing the contained data.</em> Try disabling the output of a component. You will see that you get errors downstream!</p>
-</div>
+<h2 id="07-boolean-operations">07 - Boolean Operations</h2>
 <h2 id="08-geometry-analysis">08 - Geometry Analysis</h2>
 <p>Group 8 demonstrates how Grasshopper can be used for geometrical analysis, and how you can quickly build up algebraic functions. </p>
 <p>In this instance, our goal is to determine how far off our widget's arm length is from a user set desired length. We begin by measuring the length of the <code>Line</code> component with <code>Length</code>. We use a <code>Number Slider</code> to define the desired length. We subtract the actual length from the desired length using <code>Subtraction</code> to give us the signed difference. Since we don't care about whether the arm length is less than or greater than the desired length, we get rid of the sign using <code>Absolute</code>. Finally we use a <code>Panel</code> to get a text output of how far away we are from our goal.</p>
