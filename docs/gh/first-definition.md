@@ -140,6 +140,18 @@ You have now created a Rhino object from the component you baked that you can in
 
 ## 02 / 03 - Setting Parameters
 
+*Parameters* in the context of Grasshopper refer to 2 things:
+
+1.  Parameters are the *variables* of a Grasshopper definition. Think back to high school math - the function $y=sin(x)$ has a *parameter or        variable* $x$. As $x$ changes, the output $y$ also changes. In this analogy, $y$ is the geometry we will utlimately bake into Rhino, $sin()$ is our Grasshopper definition, and $x$ are our input parameters. However, in Grasshopper, instead of just numbers, we are able to pass geometry, text, user interaction and all sorts of things in as parameters.<figure markdown>
+  ![Basic Definition](../img/first-def/sinwave.jpg)
+</figure>
+
+2.  We also use the terms *parameter* to refer to the Grasshopper components which are used to pass in values. These special components are handily stored in the *parameters* tab. 
+!!! Tip "Parameters & Components - What's the Difference"
+    All the little 'nodes' that make up a Grasshopper definition (script) are called *components*. *Parameters* are a class of component that either reference data from Rhino, reference data from outside of Rhino / Grasshopper, or reference user input.
+
+
+
 In this section of our definition, we are using 3 `Number Slider` *parameters* to define the X, Y, and Z values of a 3D point. To convert these values into the geometric point, we use `Construct Point`. 
 
 We also use a `Number Slider` to define the **Radius** of the `Sphere`.
@@ -148,8 +160,7 @@ We also use a `Number Slider` to define the **Radius** of the `Sphere`.
   ![Basic Definition](../img/first-def/02_params.png){ width="850" }
 </figure>
 
-!!! Tip "Parameters & Components - What are they?"
-    All the little 'nodes' that make up a Grasshopper definition (script) are called *components*. *Parameters* are a class of component that either reference data from Rhino, reference data from outside of Rhino / Grasshopper, or, as in this case, reference user input.
+
 
 The output of `Construct Point` is plugged into the the **Base** input of the `Sphere` component.
 
