@@ -156,14 +156,7 @@ The output of `Construct Point` is plugged into the the **Base** input of the `S
 !!! Warning "Grasshopper Type Conversions"
     Grasshopper often converts geometrical types that are *close enough* upon input. In this example, `Construct Point` outputs a 3D point which is plugged into **Base** in `Sphere` despite **Base** asking for a 3D plane. In cases like these Grasshopper will automatically convert a 3D point into a plane with an origin defined by that 3D point. Other conversions happen - try plugging the 'wrong' geometry into inputs to see what happens, but don't be surprised if you get an error sometimes!
 
-## 04 / 05 - Drawing a Line and Visualizing Geometry
-
-In addition to textual descriptions, we can of course, visualize geometry in the Rhino window. Be default, geometry that is visible *but not selected* will be displayed as red while geometry that *is selected* will be displayed a green.
-
-In this case when we ++"lmb"++ the `Construct Point` in group 4, we see the corresponding point turn green in the Rhino viewport.
-
-Group 5 shows the use of the `Line` component. This component defines a line from a start point and an end point - extremely useful.
-
+## 04 / 05 - Drawing a Line
 <figure markdown>
   ![Basic Definition](../img/first-def/05_arm_line.png){ width="850" }
 </figure>
@@ -179,16 +172,7 @@ Grasshopper offers a really useful way to quickly alter numerical values on comp
   ![Basic Definition](../img/first-def/6a_expression.png){ width="850" }
 </figure>
 
-## 07 - Previewing Geometry
-
-Grasshopper is *non-destructive*. Geometry created during the process of building up a definition is never deleted. However, you will often want to hide intermediate geometry. To do so, ++"rmb"++ the component containing the geometry to be hidden, and ++"lmb"++ *Preview*. This will toggle on and off the geometry preview in the Rhino viewport without affecting the downstream Grasshopper components.
-
-<figure markdown>
-  ![Basic Definition](../img/first-def/07_boolean.gif){ width="850" }
-</figure>
-
-!!! Warning "Enable is different than Preview"
-    Enable disables both the preview in the Rhino viewport, *and disables the component preventing downstream components from accessing the contained data.* Try disabling the output of a component. You will see that you get errors downstream!
+## 07 - Boolean Operations
 
 ## 08 - Geometry Analysis
 Group 8 demonstrates how Grasshopper can be used for geometrical analysis, and how you can quickly build up algebraic functions. 
