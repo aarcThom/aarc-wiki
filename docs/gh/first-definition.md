@@ -1,6 +1,6 @@
 # Your First Grasshopper Definition
 
-For the first real definition we cover, we are going to make a widget. This widget isn't totally purposeless - it demonstrates some of the core functionalities within Grasshopper. See [this link](https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/01_basic_definition.gh) for the file.
+For the first real definition we cover, we are going to make a widget to put into practice what was covered in the previous interface section. Moreso, this widget will demonstrate in a toy manner, some of the major uses of Grasshopper. See [this link](https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/01_basic_definition.gh) for the file.
 
 We will cover this and future definitions, step by step. Refer to the numbered component groups in the image below.
 
@@ -9,9 +9,105 @@ We will cover this and future definitions, step by step. Refer to the numbered c
   <figcaption>How to make a Widget Using Grasshopper</figcaption>
 </figure>
 
-## 01 - Geometry
+## 01 - How a Geometry Component Works
 
-We will start with geometry we can create within Grasshopper itself. To create a sphere using only Grasshopper, we can use `Sphere`. The key take away from examining this component with its default settings is that Grasshopper offers multiple methods of visualizing data contained within a component.
+### 01A - Parallels with a Rhino Command
+A single component in Grasshopper often roughly corresponds to a command in Rhino. 
+For example, run the Rhino command `Sphere`. You will be taken through a 2 step process via the Rhino command line.
+
+1.  Rhino will first prompt you for the center of the sphere which you can provide either with your cursor or with coordinates through the command line.
+2.  Rhino will prompt you for a radius which you can provide in one of the two ways above.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01b_rhino_sphere.gif){ width="850" }
+</figure>
+
+Grasshopper provides an analogous component, also named `Sphere`. To use it, open Grasshopper, click the *Surface* tab, then the *Primitive* dropdown menu, and select `Sphere`.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01c_gh_sphere.gif){ width="850" }
+</figure>
+
+Take a look at the component on the canvas. Remembering that Grasshopper flows from left to right, we can intuit that we have 2 inputs: **Base** and **Radius**. Our single output, **Sphere** is the geometry itself. *This Grasshopper component requires the same inputs to create the same output as the corresponding Rhino command.*
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01d_sphere_in_out.png){ width="850" }
+</figure>
+
+This is fundamentally how Grasshopper works. We use components as flexible and non-destructive (parametric) stand-ins for commands we traditionally run through Rhino. In other words, once you've created that sphere in Rhino, you can't modify its properties without resorting to other additional commands such as `scale3D`, ++ctrl+z++, etc. With Grasshopper, we can tweak the inputs to the sphere all day long!
+
+### 01B - How Component Geometry is Represented Visually
+
+#### Viewport Representation
+Grasshopper geometry is represented much differently that Rhino geometry. To see this, zoom in towards the origin of your Rhino viewport. You'll see a translucent red sphere. Click the `Sphere` component, and the translucent sphere will turn green. This little ghostly sphere corresponds to the `Sphere` component.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01e_preview_geo.gif){ width="850" }
+</figure>
+
+!!! Tip "Grasshopper geometry is a representation of geometry within a component"
+    If a Grasshopper component creates, alters, or reorganizes geometry, there will be a corresponding representation in the Rhino viewport. This representation will be green if the component is selected in the GH canvas and red if the component is not selected in the canvas.
+
+Now, if you try clicking on the Grasshopper sphere in Rhino, what happens? Nothing! You cannot interact with the Grasshopper geometry directly in Rhino in this way. Think back to that one undergrad philosophy course you took, and recall a allegory about a cave (but don't recall it too well!) Rhino representations of Grasshopper geometry are just that, *representations* of specific points in your parametric modeling process.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/cave.jpg)
+  <figcaption>This is EXACTLY how Grasshopper works under the hood</figcaption>
+</figure>
+
+To illustrate the point that Rhino previews of Grasshopper geometry are representations, try placing a `Move` component onto the canvas, and hooking the output of `Sphere` into the `Geometry` input. You will see that both the original `Sphere` geometry and the new sphere, output from `Move` are present in the viewport. 
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01f_move_sphere.gif){ width="850" }
+</figure>
+
+Both spheres present in the viewport are representations of specific steps of the modeling process. This hilights another important point:
+
+!!! Tip "Grasshopper components are non-destructive"
+    A grasshopper component does not erase the geometry or information contained in the previous step. Every step of the parametric modeling process is retained.
+
+We will get into ways we can interact with Grasshopper through the Rhino viewport, when we talk about *referencing geometry*, but in general, the primary way that we interact with Grasshopper geometry is through the Grasshopper canvas.
+
+#### Preview
+Since the geometry we see in the Rhino viewport is a *representation*, we are able to turn on and off its visibility without effecting the geometry actually contained within the component. Try ++"rmb"++ `Sphere` and toggling *preview*.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01g_view.gif){ width="850" }
+</figure>
+
+When we toggle *preview* we are toggling whether or not the geometry representation is visible in Rhino. *Turning off preview does not alter the underlying Grasshopper geometry or affect the following components.*
+
+Also note that when a component's preview is turned off, the component itself becomes a slightly darker shade of grey.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01i_preview_gh.png){ width="850" }
+</figure>
+
+#### Enable
+
+When we toggle *enable* we are toggling both the Rhino preview and the actual Grasshopper component. You can see that both spheres dissapear since `Move` doesn't have the original sphere flowing into it. *Disabling a component disables the underlying geometry and makes the component's information unavailable to downstream components.*
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01h_disable.gif){ width="850" }
+</figure>
+
+When a component is disabled, it takes on a more muted gray scheme. The orange wire also indicates that no data is flowing from the disabled component's output.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01j_enable_gh.png){ width="850" }
+</figure>
+
+#### Delete
+
+Finally, deleting a component from the canvas, will wipe its corresponding representation from the viewport, and make the now-deleted information unavailable to all downstream components. I'm deleting the `Sphere` in the .gif below, but try deleting the `Move` component to follow along with the next steps. You just ++"lmb"++ `Move` and hit ++delete++.
+
+<figure markdown>
+  ![Basic Definition](../img/first-def/01_k_delete.gif){ width="850" }
+</figure>
+
+### 01C - How Component Information is Represented Textually
+
+While textual representations of geometry may seem overkill at this point, the textual representations of component data are often more useful than visual representations in the viewport. This will become more apparent when we start considering the organization of data within a definition, but even at this point, we can use these menus to learn the inputs and outputs of a specific component. Hover over the inputs, outputs, and icon of `Sphere`.
 
 <figure markdown>
   ![Basic Definition](../img/first-def/01_geo.png){ width="850" }
@@ -19,29 +115,28 @@ We will start with geometry we can create within Grasshopper itself. To create a
 
 !!! Tip "Hover over everything"
     In the input and output boxes shown above, we are shown three important pieces of data. Going from top to bottom:
+
     1. The name of the input or output.
     2. A description of what sort of data can be passed through the input or output.
     3. A description of the data currently flowing through an input or output.
 
-Grasshopper also allows us to preview our geometry in the Rhino viewport. Grasshopper geometry, by default will appear red. When the corresponding component is selected, the geometry will appear green.
+### 01D - Baking
+We've covered how the representations of Grasshopper geometry are not Rhino geometry. But how do we then bring our GH work into Rhino so we can finish our project? We bake it! **Baking refers to converting Grasshopper geometry to Rhino geometry.**
 
 <figure markdown>
-  ![Basic Definition](../img/first-def/01_a_geo.png){ width="850" }
+  ![Basic Definition](../img/first-def/Julia_Child_Bakes.png)
+  <figcaption>The joys of baking</figcaption>
 </figure>
-
-!!! Warning "Grasshopper geometry doesn't exit in Rhino until baked!"
-    Despite being able to view the geometry in the Rhino viewports, Grasshopper geometry exists in its own world until it is specifically brought into Rhino through baking.
-
-## Baking
-**Baking refers to converting Grasshopper geometry to Rhino geometry.**
 
 To bring geometry from Grasshopper into Rhino at any step of your definition, ++"rmb"++ the component you want to *bake* and select 🍳**Bake**.
 
 This will bring up the generically titled *Attributes* window. Here, you can select which layer you want to *bake* your selected Grasshopper geometry to. You can also choose to group the geometry or set some display options.
 
 <figure markdown>
-  ![Basic Definition](../img/first-def/00_baking.png){ width="850" }
+  ![Basic Definition](../img/first-def/01_l_bake.gif){ width="850" }
 </figure>
+
+You have now created a Rhino object from the component you baked that you can interact with in Rhino. Note, that this Rhino object that you have just baked exists totally independently of all your Grasshopper geometry. You can delete or transform it without any side effects in the Grasshopper canvas.
 
 ## 02 / 03 - Setting Parameters
 
