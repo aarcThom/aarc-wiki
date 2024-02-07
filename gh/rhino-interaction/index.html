@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../first-definition/">
+      
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>Rhino interaction - AARC WIKI</title>
+        <title>Interacting With Rhino / Geometrical Concepts - AARC WIKI</title>
       
     
     
@@ -69,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#interacting-with-rhino-and-basic-geometrical-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rhino interaction
+              Interacting With Rhino / Geometrical Concepts
             
           </span>
         </div>
@@ -211,19 +218,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -237,7 +246,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Grasshopper Basics
@@ -286,6 +295,94 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Interacting With Rhino / Geometrical Concepts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Interacting With Rhino / Geometrical Concepts
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01-02-referencing-rhino-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      01 / 02 - Referencing Rhino Geometry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-interacting-with-rhino-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      03 - Interacting with Rhino Geometry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04-surface-uv-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      04 - Surface UV Coordinates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -310,6 +407,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01-02-referencing-rhino-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      01 / 02 - Referencing Rhino Geometry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-interacting-with-rhino-geometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      03 - Interacting with Rhino Geometry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04-surface-uv-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      04 - Surface UV Coordinates
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -324,9 +458,42 @@
                   
 
 
-  <h1>Rhino interaction</h1>
-
-
+<h1 id="interacting-with-rhino-and-basic-geometrical-concepts">Interacting with Rhino and Basic Geometrical Concepts</h1>
+<p>See <a href="https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/02_refRhino_geoConcepts.3dm">this Rhino file</a> and <a href="https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/02_refRhino_geoConcepts.gh">this Grasshopper file</a>.</p>
+<p>In this example, we will be looking at how we can place a tree, made with Rhino, on a surface, lofted in Grasshopper from Rhino curves. We will explore the the following important concepts:</p>
+<ol>
+<li><strong>Referencing Rhino geometry</strong></li>
+<li><strong>Surface UVs</strong></li>
+<li><strong>Points</strong></li>
+<li><strong>Vectors</strong></li>
+<li><strong>Planes</strong></li>
+</ol>
+<p>Our grasshopper definition looks like this:</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/__definition.png" width="850" /></p>
+</figure>
+<p>Our Rhino viewport will look like this:</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/__rhino_view.png" width="850" /></p>
+</figure>
+<h2 id="01-02-referencing-rhino-geometry">01 / 02 - Referencing Rhino Geometry</h2>
+<p>For the last definition we looked at, we created all of our geometry within Grasshopper itself, but usually it's easier to create geometry in Rhino and then bring it into Grasshopper. This is called <strong>referencing geometry</strong>.</p>
+<p>For an in-depth look at referencing Rhino geometry, see <a href="https://hopific.com/how-to-reference-objects-in-grasshopper/#:~:text=Referencing%20geometry%20is%20oftentimes%20the,first%20group%20called%20'Geometry'.">this thorough write-up on Hopific</a>.</p>
+<h2 id="03-interacting-with-rhino-geometry">03 - Interacting with Rhino Geometry</h2>
+<p>When you reference Rhino geometry in Grasshopper, you are creating a live link to that geometry. Changes that are made in Rhino will automatically update the referenced geometry in Grasshopper. Any downstream impacts within the GH definition will also update in real time.</p>
+<p>In our case, after referencing our curves, we can move them around, scale them, adjust their control points, etc. and all changes will be reflected in Grasshopper.</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/03a_ref_crvs.gif" width="850" /></p>
+</figure>
+<p>However, there are limitations to this live link. Grasshopper references geometry per Rhino object. If you were to split one of your referenced curves into two, Grasshopper would lose the link to the two resultant curves, as technically, two new objects are created in Rhino. In such a case, you will need to re-reference the new geometry.</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/03b_split_crv.gif" width="850" /></p>
+</figure>
+<h2 id="04-surface-uv-coordinates">04 - Surface UV Coordinates</h2>
+<p>In Rhino, we are used to working with coordinates. In particular, we are used to working in a 3D Cartesian coordinate system composed of X values and Y values (the horizontal coordinates) and a Z value (the vertical coordinate). If we wanted to represent some points on our lofted surface as X,Y,Z coordinates, it would look something like:</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/04a_cartesian.png" width="850" /></p>
+</figure>
 
 
 
