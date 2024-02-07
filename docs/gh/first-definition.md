@@ -1,4 +1,4 @@
-# Your First Grasshopper Definition
+# Basic Grasshopper Functionality
 
 For the first real definition we cover, we are going to make a widget to put into practice what was covered in the previous interface section. Moreso, this widget will demonstrate in a toy manner, some of the major uses of Grasshopper. See [this link](https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/01_basic_definition.gh) for the file.
 
@@ -150,8 +150,6 @@ You have now created a Rhino object from the component you baked that you can in
 !!! Tip "Parameters & Components - What's the Difference"
     All the little 'nodes' that make up a Grasshopper definition (script) are called *components*. *Parameters* are a class of component that either reference data from Rhino, reference data from outside of Rhino / Grasshopper, or reference user input.
 
-
-
 In this section of our definition, we are using 3 `Number Slider` *parameters* to define the X, Y, and Z values of a 3D point. To convert these values into the geometric point, we use `Construct Point`. 
 
 We also use a `Number Slider` to define the **Radius** of the `Sphere`.
@@ -159,8 +157,6 @@ We also use a `Number Slider` to define the **Radius** of the `Sphere`.
 <figure markdown>
   ![Basic Definition](../img/first-def/02_params.png){ width="850" }
 </figure>
-
-
 
 The output of `Construct Point` is plugged into the the **Base** input of the `Sphere` component.
 

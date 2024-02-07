@@ -24,7 +24,7 @@ nav:
         #- 'Introduction': 'gh/intro.md'
         - 'Interface': 'gh/interface.md'
         - 'Writing Your First Definition': 'gh/first-definition.md'
-        #- 'Interacting With Rhino': 'gh/rhino-interaction.md'
+        - 'Interacting With Rhino / Geometrical Concepts': 'gh/rhino-interaction.md'
         #- 'Parameters': 'gh/parameters.md'
         #- 'Vectors': 'gh/vectors.md'
         #- 'Transformations': 'gh/transformations.md'
