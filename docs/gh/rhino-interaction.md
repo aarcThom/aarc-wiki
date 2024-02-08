@@ -48,11 +48,50 @@ However, there are limitations to this live link. Grasshopper references geometr
 
 ## 04 - Surface UV Coordinates
 
+### UV Coordinates - Overview
+
 In Rhino, we are used to working with coordinates. In particular, we are used to working in a 3D Cartesian coordinate system composed of X values and Y values (the horizontal coordinates) and a Z value (the vertical coordinate). If we wanted to represent some points on our lofted surface as X,Y,Z coordinates, it would look something like:
 
 <figure markdown>
   ![Basic Definition](../img/02_ref_geo/04a_cartesian.png){ width="850" }
 </figure>
 
+This X,Y,Z coordinate system is great for a lot of things, but gets a bit clunky when we want to describe a position on the surface itself. For example, the above image shows our center point of the surface as **(28, 148, 14)** but wouldn't it be much easier if we could describe our center point as **(0.5, 0.5)**? This is where a **UV coordinate system** comes into play. We can describe points on the surface with a **UV coordinate system** like so:
 
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/04b_UV.png){ width="850" }
+</figure>
 
+Since we are only working with U and V dimensions, we drop any notion of elevation. In other words, this coordinate system does not describe the waviness of the surface but only the position *within* the surface. If you want to form a mental image, imagine a gridded blanket where you consider the lines in one direction U, and the lines in the other direction, V. Those lines still describe the same positions on the blanket, even if they're wrapped around a dog!
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/04D_UVblanket.png){ width="850" }
+</figure>
+
+If you want to see those wavy lines in the Rhino screen, you can also run the command, `_ExtractIsocurve`.
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/04c_uvlines.gif){ width="850" }
+</figure>
+
+### UV Coordinates - Reparameterization
+
+In Grasshopper it is really useful to describe surfaces with UV coordinates ranging from 0 to 1 in both directions. It ensures that whatever wavy surface we pass into a component, we will be able to describe a location on that surface.
+
+If we look back to [the provided file's group 4](https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/02_refRhino_geoConcepts.gh) you can see that we're using the `MD Slider` to define a UV coordinate which we feed into the **Point** input of `Evaluate Surface`.
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/04e_param.png){ width="850" }
+</figure>
+
+This makes sense so far given what we've learned about UV coordinates, but why do we only see a little wiggle when we move the `MD Slider` around? We see this behavior because Grasshopper, by default doesn't assign a range of 0 --> 1 to the UV directions of a surface. The UV values by default are based on XYZ values, or something like that, I think ... I've represented these random upper limits of UV with 1234 in the image below. In other words, it doesn't really matter what your initial UV system is, because you always want good old predictable 0 to 1! 
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/04e_unparammarkup.gif){ width="850" }
+</figure>
+
+To convert our surface's UV ranges to 0 --> 1, we have to ++"rmb"++ the **Surface** input of `Evaluate Surface` and click *Reparameterize*. You will know see that UV coordinates output by `MD Slider` return the location on the surface that we would expect. Get used to *reparameterizing* surfaces all the time in Grasshopper!
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/04f_reparam.gif){ width="850" }
+</figure>

@@ -48,7 +48,7 @@ Grasshopper geometry is represented much differently that Rhino geometry. To see
 !!! Tip "Grasshopper geometry is a representation of geometry within a component"
     If a Grasshopper component creates, alters, or reorganizes geometry, there will be a corresponding representation in the Rhino viewport. This representation will be green if the component is selected in the GH canvas and red if the component is not selected in the canvas.
 
-Now, if you try clicking on the Grasshopper sphere in Rhino, what happens? Nothing! You cannot interact with the Grasshopper geometry directly in Rhino in this way. Think back to that one undergrad philosophy course you took, and recall a allegory about a cave (but don't recall it too well!) Rhino representations of Grasshopper geometry are just that, *representations* of specific points in your parametric modeling process.
+Now, if you try clicking on the Grasshopper sphere in Rhino, what happens? Nothing! You cannot interact with the Grasshopper geometry directly in Rhino in this way. Think back to that one undergrad philosophy course you took, and recall an allegory about a cave (but don't recall it too well!) Rhino representations of Grasshopper geometry are just that, *representations* of specific points in your parametric modeling process.
 
 <figure markdown>
   ![Basic Definition](../img/first-def/cave.jpg)
