@@ -372,6 +372,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="04 - Surface UV Coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uv-coordinates-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Coordinates - Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uv-coordinates-reparameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Coordinates - Reparameterization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -441,6 +465,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="04 - Surface UV Coordinates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uv-coordinates-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Coordinates - Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uv-coordinates-reparameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Coordinates - Reparameterization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -490,9 +538,36 @@
 <p><img alt="Basic Definition" src="../../img/02_ref_geo/03b_split_crv.gif" width="850" /></p>
 </figure>
 <h2 id="04-surface-uv-coordinates">04 - Surface UV Coordinates</h2>
+<h3 id="uv-coordinates-overview">UV Coordinates - Overview</h3>
 <p>In Rhino, we are used to working with coordinates. In particular, we are used to working in a 3D Cartesian coordinate system composed of X values and Y values (the horizontal coordinates) and a Z value (the vertical coordinate). If we wanted to represent some points on our lofted surface as X,Y,Z coordinates, it would look something like:</p>
 <figure>
 <p><img alt="Basic Definition" src="../../img/02_ref_geo/04a_cartesian.png" width="850" /></p>
+</figure>
+<p>This X,Y,Z coordinate system is great for a lot of things, but gets a bit clunky when we want to describe a position on the surface itself. For example, the above image shows our center point of the surface as <strong>(28, 148, 14)</strong> but wouldn't it be much easier if we could describe our center point as <strong>(0.5, 0.5)</strong>? This is where a <strong>UV coordinate system</strong> comes into play. We can describe points on the surface with a <strong>UV coordinate system</strong> like so:</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/04b_UV.png" width="850" /></p>
+</figure>
+<p>Since we are only working with U and V dimensions, we drop any notion of elevation. In other words, this coordinate system does not describe the waviness of the surface but only the position <em>within</em> the surface. If you want to form a mental image, imagine a gridded blanket where you consider the lines in one direction U, and the lines in the other direction, V. Those lines still describe the same positions on the blanket, even if they're wrapped around a dog!</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/04D_UVblanket.png" width="850" /></p>
+</figure>
+<p>If you want to see those wavy lines in the Rhino screen, you can also run the command, <code>_ExtractIsocurve</code>.</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/04c_uvlines.gif" width="850" /></p>
+</figure>
+<h3 id="uv-coordinates-reparameterization">UV Coordinates - Reparameterization</h3>
+<p>In Grasshopper it is really useful to describe surfaces with UV coordinates ranging from 0 to 1 in both directions. It ensures that whatever wavy surface we pass into a component, we will be able to describe a location on that surface.</p>
+<p>If we look back to <a href="https://github.com/aarcThom/aarc-wiki/blob/main/gh_definitions/02_refRhino_geoConcepts.gh">the provided file's group 4</a> you can see that we're using the <code>MD Slider</code> to define a UV coordinate which we feed into the <strong>Point</strong> input of <code>Evaluate Surface</code>.</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/04e_param.png" width="850" /></p>
+</figure>
+<p>This makes sense so far given what we've learned about UV coordinates, but why do we only see a little wiggle when we move the <code>MD Slider</code> around? We see this behavior because Grasshopper, by default doesn't assign a range of 0 --&gt; 1 to the UV directions of a surface. The UV values by default are based on XYZ values, or something like that, I think ... I've represented these random upper limits of UV with 1234 in the image below. In other words, it doesn't really matter what your initial UV system is, because you always want good old predictable 0 to 1! </p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/04e_unparammarkup.gif" width="850" /></p>
+</figure>
+<p>To convert our surface's UV ranges to 0 --&gt; 1, we have to <span class="keys"><kbd>rmb</kbd></span> the <strong>Surface</strong> input of <code>Evaluate Surface</code> and click <em>Reparameterize</em>. You will know see that UV coordinates output by <code>MD Slider</code> return the location on the surface that we would expect. Get used to <em>reparameterizing</em> surfaces all the time in Grasshopper!</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/04f_reparam.gif" width="850" /></p>
 </figure>
 
 
