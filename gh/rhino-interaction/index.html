@@ -398,6 +398,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#05-bounding-boxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      05 - Bounding Boxes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      06 - Points
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-8-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 / 8 - Vectors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-10-planes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 / 10 - Planes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -491,6 +527,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#05-bounding-boxes" class="md-nav__link">
+    <span class="md-ellipsis">
+      05 - Bounding Boxes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      06 - Points
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-8-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 / 8 - Vectors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-10-planes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 / 10 - Planes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -569,6 +641,36 @@
 <figure>
 <p><img alt="Basic Definition" src="../../img/02_ref_geo/04f_reparam.gif" width="850" /></p>
 </figure>
+<h2 id="05-bounding-boxes">05 - Bounding Boxes</h2>
+<p>A <strong>Bounding Box</strong> is a plane-aligned box (a rectangular prism) that exactly contains the extents of a geometry. For example, in 2D, a bounding square would exactly describe the complex bounds of the below geometry like so:</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/05a_bounds.png" width="850" /></p>
+</figure>
+<p>A bounding box extends this behavior to all 3 dimensions. </p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/05b_bounds3d.png" width="850" /></p>
+</figure>
+<p>Bounding boxes are useful for getting general dimensions of an object, or getting generalized points, among other things. In this case we are going to grab two points for from the corners of a bounding box in order to find the middle base point.</p>
+<h2 id="06-points">06 - Points</h2>
+<p><strong>Points</strong> represent a position in space. We've already encountered the concept of UV point where a point has a U value (0--&gt;1) and a V value (0--&gt;1), but in this section we will look at 3 dimensional points. The 3D point is the type of point you will most commonly encounter in day-to-day practice.</p>
+<p>In step 6 of the example GH definition, we are first grabbing all the corners of the tree's <code>Bounding Box</code> with <code>Box Corners</code>. If we hover over the outputs of <strong>Corner A</strong> and <strong>Corner B</strong>, we will see that they return two points on the bottom of the box.</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/06a_points.png" width="850" /></p>
+</figure>
+<p>As we mentioned, 3D points have three dimensions: X, Y, and Z. The outputs A and B give us the point at X=Min, Y=Min, Z=Min and X=Max, Y=Max, and Z=Min respectively. This is how we know that the points are diagonal to each other. We can also hover over the ouputs and see the actual Rhino space coordinates of each point.</p>
+<p>Since points are defined by 3 coordinates each, we can perform a bit of math on them to compose new points. In the second part of step 6, we use <code>Average</code> to find the point in between the two corner points.</p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/06b_avg_pt.png" width="850" /></p>
+</figure>
+<p>This works because we are averaging each coordinate. For example, two points <span class="arithmatex">\([0,0,0]\)</span> &amp; <span class="arithmatex">\([1,1,0]\)</span> would give us <span class="arithmatex">\([(0+1)/2,(0+1)/2,(0+0)/2] = [0.5,0.5,0]\)</span></p>
+<figure>
+<p><img alt="Basic Definition" src="../../img/02_ref_geo/06c_avg_pt.png" width="850" /></p>
+</figure>
+<p>Points are closely related to, but not the same as, the next topic, <strong>Vectors</strong>.</p>
+<h2 id="7-8-vectors">7 / 8 - Vectors</h2>
+<p>See <a href="https://hopific.com/vectors-in-grasshopper/">this Hopify article</a></p>
+<h2 id="9-10-planes">9 / 10 - Planes</h2>
+<p>See <a href="https://hopific.com/construction-planes-in-grasshopper/">this Hopify article</a></p>
 
 
 
