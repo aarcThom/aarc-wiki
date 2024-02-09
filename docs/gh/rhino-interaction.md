@@ -95,3 +95,49 @@ To convert our surface's UV ranges to 0 --> 1, we have to ++"rmb"++ the **Surfac
 <figure markdown>
   ![Basic Definition](../img/02_ref_geo/04f_reparam.gif){ width="850" }
 </figure>
+
+## 05 - Bounding Boxes
+A **Bounding Box** is a plane-aligned box (a rectangular prism) that exactly contains the extents of a geometry. For example, in 2D, a bounding square would exactly describe the complex bounds of the below geometry like so:
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/05a_bounds.png){ width="850" }
+</figure>
+
+A bounding box extends this behavior to all 3 dimensions. 
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/05b_bounds3d.png){ width="850" }
+</figure>
+
+Bounding boxes are useful for getting general dimensions of an object, or getting generalized points, among other things. In this case we are going to grab two points for from the corners of a bounding box in order to find the middle base point.
+
+## 06 - Points
+**Points** represent a position in space. We've already encountered the concept of UV point where a point has a U value (0-->1) and a V value (0-->1), but in this section we will look at 3 dimensional points. The 3D point is the type of point you will most commonly encounter in day-to-day practice.
+
+In step 6 of the example GH definition, we are first grabbing all the corners of the tree's `Bounding Box` with `Box Corners`. If we hover over the outputs of **Corner A** and **Corner B**, we will see that they return two points on the bottom of the box.
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/06a_points.png){ width="850" }
+</figure>
+
+As we mentioned, 3D points have three dimensions: X, Y, and Z. The outputs A and B give us the point at X=Min, Y=Min, Z=Min and X=Max, Y=Max, and Z=Min respectively. This is how we know that the points are diagonal to each other. We can also hover over the ouputs and see the actual Rhino space coordinates of each point.
+
+Since points are defined by 3 coordinates each, we can perform a bit of math on them to compose new points. In the second part of step 6, we use `Average` to find the point in between the two corner points.
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/06b_avg_pt.png){ width="850" }
+</figure>
+
+This works because we are averaging each coordinate. For example, two points $[0,0,0]$ & $[1,1,0]$ would give us $[(0+1)/2,(0+1)/2,(0+0)/2] = [0.5,0.5,0]$
+
+<figure markdown>
+  ![Basic Definition](../img/02_ref_geo/06c_avg_pt.png){ width="850" }
+</figure>
+
+Points are closely related to, but not the same as, the next topic, **Vectors**.
+
+## 7 / 8 - Vectors
+See [this Hopify article](https://hopific.com/vectors-in-grasshopper/)
+
+## 9 / 10 - Planes
+See [this Hopify article](https://hopific.com/construction-planes-in-grasshopper/)
