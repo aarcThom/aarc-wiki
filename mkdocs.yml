@@ -21,7 +21,7 @@ theme:
 nav:
     - Home: 'index.md'
     - 'Grasshopper Basics':
-        #- 'Introduction': 'gh/intro.md'
+        - 'Introduction and Conventions': 'gh/intro.md'
         - 'Interface': 'gh/interface.md'
         - 'Writing Your First Definition': 'gh/first-definition.md'
         - 'Interacting With Rhino / Geometrical Concepts': 'gh/rhino-interaction.md'
@@ -31,6 +31,32 @@ nav:
         #- 'Planes': 'gh/planes.md'
         #- 'Annotations, Grouping, Clustering': 'gh/annotations.md'
         - 'Data Management': 'gh/data-management.md'
+
+    - 'Python for Architects':
+        - 'Introduction and Conventions': 'python/00_front/intro.md'
+        - 'Secondary Resources': 'python/00_front/sec_srcs.md'
+
+        - '01. Getting Familiar with Our Workspace':
+          - 'Overview': 'python/01_setup/overview.md'
+          - 'Setting up your Enviroment': 'python/01_setup/setup.md'
+          - 'Comments, Markdown, Saving': 'python/01_setup/comm_md_save.md'
+          - 'Key Terms': 'python/01_setup/terms.md'
+          - '* Customizing Your Environment': 'python/01_setup/vsc_custom.md'
+          - '* VS Code Shortcuts': 'python/01_setup/vsc_keys.md'
+          - '* Getting Ready for Rhino and Grasshopper': 'python/01_setup/rh_gh.md'
+
+
+        - "02. Basic Programming Concepts and Statements":
+          - 'Overview': 'python/02_basics/overview.md'
+          - 'Expressions and Operators': 'python/02_basics/exp_op.md'
+          - 'Functions, Objects, Methods, Types - An Overview': 'python/02_basics/func_obj_meth.md'
+          - 'Strings': 'python/02_basics/strings.md'
+          - 'Variables': 'python/02_basics/variables.md'
+          - 'Key Terms': 'python/02_basics/terms.md'
+
+
+          
+
     #- About:
         #- 'License': 'license.md'
         #- 'Release Notes': 'release-notes.md'
