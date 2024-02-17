@@ -48,10 +48,10 @@ nav:
 
         - "02. Basic Programming Concepts and Statements":
           - 'Overview': 'python/02_basics/overview.md'
-          - 'Expressions and Operators': 'python/02_basics/exp_op.md'
-          - 'Functions, Objects, Methods, Types - An Overview': 'python/02_basics/func_obj_meth.md'
-          - 'Strings': 'python/02_basics/strings.md'
+          - 'Expressions, Operators, Arithmetic': 'python/02_basics/exp_op.md'
+          - 'Objects & Types, Functions & Methods': 'python/02_basics/func_obj_meth.md'
           - 'Variables': 'python/02_basics/variables.md'
+          - 'Strings': 'python/02_basics/strings.md'
           - 'Key Terms': 'python/02_basics/terms.md'
 
 
