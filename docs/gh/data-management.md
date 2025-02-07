@@ -1,6 +1,6 @@
 # Data Management
 
-This page is very much a WIP. For 2024 ARCH 517 students, please refer to the "Data Management" Presentation uploaded to canvas and the further reading / viewing below. 
+This page is very much a WIP. For 2025 ARCH 517 students, please refer to the "Data Management" Presentation uploaded to canvas and the further reading / viewing below. 
 
 <figure markdown>
   ![Basic Definition](../img/data_management/feast.jpg){ width="850" }

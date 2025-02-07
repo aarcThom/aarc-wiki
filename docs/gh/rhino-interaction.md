@@ -156,10 +156,6 @@ A vector is not tied to a specific location, like a point is. The same vector $[
 Remember, the vector arrows drawn are just visualizations of a vector - a vector does not need a start or end point. An analogy: you can tell someone to walk forward 10 steps and to the right 5 steps in either Paris or Hong Kong - the directions you give are still the same regardless of where the person starts or ends.
 
 
-
-
-
-
 See [this Hopify article](https://hopific.com/vectors-in-grasshopper/)
 
 ## 9 / 10 - Planes
