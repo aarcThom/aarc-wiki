@@ -137,6 +137,29 @@ This works because we are averaging each coordinate. For example, two points $[0
 Points are closely related to, but not the same as, the next topic, **Vectors**.
 
 ## 7 / 8 - Vectors
+A **Vector**'s textual representation *looks* like a point. In other words, $[1,1,1]$ could represent both a point and a vector.
+
+However vectors are very different! Whereas a point describes a coordinate in 3 dimensional space, and in Rhino, is also a geometric object, a vector describes a *direction and length* in 3 dimensional space. A vector can be thought of as a *translation* or a movement.
+
+Below shows points at $[0,0,0]$ and $[1,1,1]$ and a vector, $[1,1,1]$. Since a vector describes a *translation*, and is not actually a piece of geometry, the arrow is just a visual representation of the vector. In this case, we could say that a vector $[1,1,1]$ translates a point at $[0,0,0]$ to a new coordinate at $[1,1,1]$.
+
+<figure markdown>
+  ![A vector 1,1,1](../img/02_ref_geo/ptat111.png){ width="850" }
+</figure>
+
+A vector is not tied to a specific location, like a point is. The same vector $[1,1,1]$ could also be used to translate a point from the coordinate $[1,1,1]$ to the coordinate $[2,2,2]$. 
+
+<figure markdown>
+  ![A vector 1,1,1 that starts at 1,1,1 and ends at 2,2,2](../img/02_ref_geo/ptat222.png){ width="850" }
+</figure>
+
+Remember, the vector arrows drawn are just visualizations of a vector - a vector does not need a start or end point. An analogy: you can tell someone to walk forward 10 steps and to the right 5 steps in either Paris or Hong Kong - the directions you give are still the same regardless of where the person starts or ends.
+
+
+
+
+
+
 See [this Hopify article](https://hopific.com/vectors-in-grasshopper/)
 
 ## 9 / 10 - Planes
